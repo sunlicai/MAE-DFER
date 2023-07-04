@@ -79,7 +79,7 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/dfew/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
   
-    Our running log file can be found in [this file](saved/model/finetuning/dfew/voxceleb2_videomae_pretrain_base_dim512_local_global_attn_depth16_region_size2510_patch16_160_frame_16x4_tube_mask_ratio_0.9_e100_with_diff_target_server170/checkpoint-49/eval_split01_lr_1e-3_epoch_100_size160_sr4_classify_token_type_region_server164/nohup.out).
+    Our running log file can be found in [this file](logs/dfew.out).
 
 - FERV39k
 
@@ -87,7 +87,7 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/ferv39k/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
   
-    Our running log file can be found in [this file](saved/model/finetuning/ferv39k/voxceleb2_videomae_pretrain_base_dim512_local_global_attn_depth16_region_size2510_patch16_160_frame_16x4_tube_mask_ratio_0.9_e100_with_diff_target_server170/checkpoint-49/eval_lr_1e-3_epoch_100_size160_sr1_classify_token_type_region_server164/nohup.out).
+    Our running log file can be found in [this file](logs/ferv39k.out).
 
 - MAFW
 
@@ -95,7 +95,7 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/mafw/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
   
-    Our running log file can be found in [this file](saved/model/finetuning/mafw/voxceleb2_videomae_pretrain_base_dim512_local_global_attn_depth16_region_size2510_patch16_160_frame_16x4_tube_mask_ratio_0.9_e100_with_diff_target_server170/checkpoint-49/eval_split03_lr_1e-3_epoch_100_size160_sr4_classify_token_type_region_server164/nohup.out).
+    Our running log file can be found in [this file](logs/mafw.out).
 
 
 ## 📰 TODO
