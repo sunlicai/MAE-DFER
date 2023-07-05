@@ -24,6 +24,23 @@ The architecture of LGI-Former is shown as follows:
 ![Result_on_MAFW](figs/Result_on_MAFW.png)
 
 
+## 👀 Visualization
+
+### ✨ Reconstruction 
+
+Sample with frame difference:
+![Reconstruction_with_Difference](figs/Reconstruction_with_Difference.png)
+
+More samples without showing frame difference:
+![Reconstruction_without_Difference](figs/Reconstruction_without_Difference.png)
+
+
+### ✨ t-SNE on DFEW
+
+
+![t-SNE_on_DFEW](figs/t-SNE.png)
+
+
 
 ## 🔨 Installation
 
@@ -51,21 +68,21 @@ Please follow the files (e.g., [dfew.py](preprocess/dfew.py)) in [preprocess](pr
 Specifically, you need to enerate annotations for dataloader ("<path_to_video> <video_class>" in annotations). 
 The annotation usually includes `train.csv`, `val.csv` and `test.csv`. The format of `*.csv` file is like:
 
-     ```
-     dataset_root/video_1  label_1
-     dataset_root/video_2  label_2
-     dataset_root/video_3  label_3
-     ...
-     dataset_root/video_N  label_N
-     ```
+```
+dataset_root/video_1  label_1
+dataset_root/video_2  label_2
+dataset_root/video_3  label_3
+...
+dataset_root/video_N  label_N
+```
 
 An example of [train.csv](saved/data/dfew/org/split01/train.csv) of DFEW fold1 (fd1) is shown as follows:
 
-     ```
-     /mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02522 5
-     /mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02536 5
-     /mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02578 6
-     ```
+```
+/mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02522 5
+/mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02536 5
+/mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02578 6
+```
 
 ## 📍Pre-trained Model
 
