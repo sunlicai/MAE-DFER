@@ -28,10 +28,10 @@ The architecture of LGI-Former is shown as follows:
 
 ### ✨ Reconstruction 
 
-Sample with frame difference:
+Sample with showing frame difference (According to the reviewer's request, we show both the reconstructed frame difference signal in *even* frames and the whole video in *all* frames by adding the reconstructed frame difference signal in *even* frames with the adjacent reconstructed *odd* frames):
 ![Reconstruction_with_Difference](figs/Reconstruction_with_Difference.png)
 
-More samples without showing frame difference:
+More samples without showing frame difference (For simplicity, we do not show the reconstructed frame difference signal and only show the whole reconstructed video in the Appendix of the paper):
 ![Reconstruction_without_Difference](figs/Reconstruction_without_Difference.png)
 
 
