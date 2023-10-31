@@ -8,6 +8,8 @@
 > [Licai Sun](https://scholar.google.com/citations?user=7qo_cTcAAAAJ&hl=en&oi=ao), [Zheng Lian](https://scholar.google.com/citations?user=S34nWz0AAAAJ&hl=en), [Bin Liu](https://scholar.google.com/citations?user=UEB_5QEAAAAJ&hl=en), and [Jianhua Tao](https://scholar.google.com/citations?user=781jbHMAAAAJ&hl=en)<br>
 > University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
+## 📰 News
+**[2023.10.31]** We upload the [poster](figs/MAE-DFER%20Poster.pdf) of MAE-DFER for ACM MM 2023.<br>
 
 ## ✨ Overview
 
