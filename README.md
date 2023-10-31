@@ -1,17 +1,32 @@
-# MAE-DFER: Efficient Masked Autoencoder for Self-supervised Dynamic Facial Expression Recognition (ACM MM 2023)
+# [ACM MM 2023] MAE-DFER: Efficient Masked Autoencoder for Self-supervised Dynamic Facial Expression Recognition
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mae-dfer-efficient-masked-autoencoder-for/dynamic-facial-expression-recognition-on-dfew)](https://paperswithcode.com/sota/dynamic-facial-expression-recognition-on-dfew?p=mae-dfer-efficient-masked-autoencoder-for)<br>
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mae-dfer-efficient-masked-autoencoder-for/dynamic-facial-expression-recognition-on)](https://paperswithcode.com/sota/dynamic-facial-expression-recognition-on?p=mae-dfer-efficient-masked-autoencoder-for)<br>
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mae-dfer-efficient-masked-autoencoder-for/dynamic-facial-expression-recognition-on-mafw)](https://paperswithcode.com/sota/dynamic-facial-expression-recognition-on-mafw?p=mae-dfer-efficient-masked-autoencoder-for)<br>
 
-## ✨ Abstract
+> [[arXiv]](https://arxiv.org/abs/2307.02227), [[ACM Digital Library]](https://dl.acm.org/doi/10.1145/3581783.3612365) <br>
+> [Licai Sun](https://scholar.google.com/citations?user=7qo_cTcAAAAJ&hl=en&oi=ao), [Zheng Lian](https://scholar.google.com/citations?user=S34nWz0AAAAJ&hl=en), [Bin Liu](https://scholar.google.com/citations?user=UEB_5QEAAAAJ&hl=en), and [Jianhua Tao](https://scholar.google.com/citations?user=781jbHMAAAAJ&hl=en)<br>
+> University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
-Dynamic facial expression recognition (DFER) is essential to the development of intelligent and empathetic machines. Prior efforts in this field mainly fall into supervised learning paradigm, which is restricted by the limited labeled data in existing datasets. Inspired by recent unprecedented success of masked autoencoders (e.g., VideoMAE), this paper proposes MAE-DFER, a novel self-supervised method which leverages large-scale self-supervised pre-training on abundant unlabeled data to advance the development of DFER. Since the vanilla Vision Transformer (ViT) employed in VideoMAE requires substantial computation during fine-tuning, MAE-DFER develops an efficient local-global interaction Transformer (LGI-Former) as the  encoder. LGI-Former first constrains self-attention in local spatiotemporal regions and then utilizes a small set of learnable representative tokens to achieve efficient local-global information exchange, thus avoiding the expensive computation of global space-time self-attention in ViT. Moreover, in addition to the standalone appearance content reconstruction in VideoMAE, MAE-DFER also introduces explicit facial motion modeling to encourage LGI-Former to excavate both static appearance and dynamic motion information. Extensive experiments on six datasets show that MAE-DFER consistently outperforms state-of-the-art supervised methods by significant margins, verifying that it can learn powerful dynamic facial representations via large-scale self-supervised pre-training. Besides, it has comparable or even better performance than VideoMAE, while largely reducing the computational cost (about 38\% FLOPs). We believe MAE-DFER has paved a new way for the advancement of DFER and can inspire more relavant research in this field and even other related tasks.
 
-The architecture of LGI-Former is shown as follows:
+## ✨ Overview
 
-![LGI-Former](figs/LGI-Former.png)
+Dynamic Facial Expression Recognition (DFER) is facing **supervised dillema**. On the one hand, current efforts in DFER focus on developing *various* deep supervised models, but only achieving *incremental* progress which is mainly attributed to the *longstanding lack* of large-scale high-quality datasets. On the other hand, due to the *ambiguity* and *subjectivity* in facial expression perception, acquiring large-scale high-quality DFER samples is pretty *time-consuming* and *labor-intensive*. Considering that there are massive unlabeled facial videos on the Internet, this work aims to **explore a new way** (i.e., self-supervised learning) which can fully exploit large-scale *unlabeled* data to largely advance the development of DFER.
 
+<p align="center">
+  <img src="figs/Overview.png" width=50%> <br>
+  Overview of our MAE-DFER.
+</p>
+
+Inspired by recent success of VideoMAE, MAE-DFER makes an early attempt to devise a novel masked autoencoder based self-supervised framework for DFER. It improves VideoMAE by developing an *efficient* LGI-Former as the encoder and introducing *joint* masked appearance and motion modeling. With these two core designs, MAE-DFER *largely* reduces the computational cost (about 38% FLOPs) during fine-tuning while having comparable or even *better* performance.
+
+<p align="center">
+  <img src="figs/LGI-Former.png" width=100%> <br>
+  The architecture of LGI-Former.
+</p>
+<!-- ![LGI-Former](figs/LGI-Former.png) -->
+
+Extensive experiments on *six* DFER datasets show that our MAE-DFER *consistently* outperforms the previous best supervised methods by *significant* margins (**\+5∼8%** UAR on three *in-the-wild* datasets and **\+7∼12%** WAR on three *lab-controlled* datasets), which demonstrates that it can learn *powerful* dynamic facial representations for DFER via large-scale self-supervised pre-training. We believe MAE-DFER **has paved a new way** for the advancement of DFER and can inspire more relevant research in this field and even other related tasks (e.g., dynamic micro-expression recognition and facial action unit detection).
 
 ## 🚀 Main Results
 
@@ -32,10 +47,9 @@ The architecture of LGI-Former is shown as follows:
 
 ### ✨ Reconstruction 
 
-Sample with showing frame difference (According to the reviewer's request, we show both the reconstructed frame difference signal in *even* frames and the whole video in *all* frames by adding the reconstructed frame difference signal in *even* frames with the adjacent reconstructed *odd* frames):
 ![Sample_with_showing_frame_difference](figs/Sample_with_showing_frame_difference.png)
 
-More samples without showing frame difference (For simplicity, we do not show the reconstructed frame difference signal and only show the whole reconstructed video in the Appendix of the paper):
+More samples without showing frame difference:
 ![More_samples_without_showing_frame_difference](figs/More_samples_without_showing_frame_difference.png)
 
 
@@ -115,14 +129,37 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     ```
     sh scripts/mafw/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
-  
+    
     Our running log file can be found in [this file](logs/mafw.out).
 
 
-## 📰 TODO
+## ☎️ Contact 
 
-1. Release the fine-tuned models on all DFER datasets.
+If you have any questions, please feel free to reach me out at `sunlicai2019@ia.ac.cn`.
 
+## 👍 Acknowledgements
 
+This project is built upon [VideoMAE](https://github.com/MCG-NJU/VideoMAE). Thanks for their great codebase.
+
+## ✏️ Citation
+
+If you think this project is helpful, please feel free to leave a star⭐️ and cite our paper:
+
+```
+@inproceedings{sun2023mae,
+    author = {Sun, Licai and Lian, Zheng and Liu, Bin and Tao, Jianhua},
+    title = {MAE-DFER: Efficient Masked Autoencoder for Self-Supervised Dynamic Facial Expression Recognition},
+    year = {2023},
+    booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
+    pages = {6110–6121}
+}
+
+@article{sun2023mae,
+  title={MAE-DFER: Efficient Masked Autoencoder for Self-supervised Dynamic Facial Expression Recognition},
+  author={Sun, Licai and Lian, Zheng and Liu, Bin and Tao, Jianhua},
+  journal={arXiv preprint arXiv:2307.02227},
+  year={2023}
+}
+```
 
 
