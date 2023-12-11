@@ -9,6 +9,7 @@
 > University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
 ## 📰 News
+**[2023.12.11]** We provide the fine-tuned models across five folds on DFEW. Please check them below.<br>
 **[2023.10.31]** We upload the [poster](figs/MAE-DFER%20Poster.pdf) of MAE-DFER for ACM MM 2023.<br>
 
 ## ✨ Overview
@@ -117,6 +118,16 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     ```
   
     Our running log file can be found in [this file](logs/dfew.out).
+
+    The fine-tuned checkpoints and logs on five folds are as follows: 
+    |  Fold    | UAR        | WR       |      Fine-tuned   Model            |
+    | :------: | :--------: | :------: | :-----------------------:          |
+    |  1       | 62.59      | 74.88    | [log](https://drive.google.com/file/d/1dYhJiEm56V1ZwJyj-rvC8TjdmrUMa0hO/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1wRxwEZlrc3z3DqQ84xm_olmqRsj2obH3/view?usp=drive_link) | 
+    |  2       | 61.96      | 72.49    | [log](https://drive.google.com/file/d/1pwXeaevtW0Xynr248HKvMx9eWxoxdY_n/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1lY4L2PMVWuF93K6_VqEl7QrPoSK0SvaQ/view?usp=drive_link) | 
+    |  3       | 64.00      | 74.91    | [log](https://drive.google.com/file/d/1c-3sC4menIzphya-y3iZ-lT-54Ls-9Yv/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1FPKxBoGO3VXvLhcHY8iOPb9lQPi0_C1z/view?usp=drive_link) | 
+    |  4       | 63.07      | 74.05    | [log](https://drive.google.com/file/d/1ZdadMpksJtUUTx6N2Fa6LI91qs7GV_S2/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1yFDc1n8SaTEQWrVX8k65loQm45rfwQeO/view?usp=drive_link) | 
+    |  5       | 65.42      | 75.81    | [log](https://drive.google.com/file/d/18KnsGWZlgN3CZvfjs1UjH4E2AqVltsda/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1wmXO4M2kjpAOnvof8CmpJE6wUrxMUOgw/view?usp=drive_link) |
+    |  Total   | 63.41      | 74.43    | - |
 
 - FERV39k
 
