@@ -117,9 +117,9 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/dfew/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
   
-    Our running log file can be found in [this file](logs/dfew.out).
+    <!--Our running log file can be found in [this file](logs/dfew.out). -->
 
-    The fine-tuned checkpoints and logs on five folds are as follows: 
+    The fine-tuned checkpoints and logs across five folds on DFEW are provided as follows: 
     |  Fold    | UAR        | WR       |      Fine-tuned   Model            |
     | :------: | :--------: | :------: | :-----------------------:          |
     |  1       | 62.59      | 74.88    | [log](https://drive.google.com/file/d/1dYhJiEm56V1ZwJyj-rvC8TjdmrUMa0hO/view?usp=drive_link) / [checkpoint](https://drive.google.com/file/d/1wRxwEZlrc3z3DqQ84xm_olmqRsj2obH3/view?usp=drive_link) | 
