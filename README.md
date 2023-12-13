@@ -9,6 +9,7 @@
 > University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
 ## 📰 News
+**[2023.12.13]** We provide the fine-tuned model on FERV39k. Please check them below.<br>
 **[2023.12.11]** We provide the fine-tuned models across five folds on DFEW. Please check them below.<br>
 **[2023.10.31]** We upload the [poster](figs/MAE-DFER%20Poster.pdf) of MAE-DFER for ACM MM 2023.<br>
 
@@ -135,8 +136,15 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/ferv39k/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
   
-    Our running log file can be found in [this file](logs/ferv39k.out).
-
+    <!--Our running log file can be found in [this file](logs/ferv39k.out). -->
+    
+    The fine-tuned checkpoints and logs on FERV39k are provided as follows:
+    |  Version    | UAR        | WR       |      Fine-tuned   Model            |
+    | :------:    | :--------: | :------: | :-----------------------:          |
+    |  Reported   | 43.12      | 52.07    | [log](logs/ferv39k.out) / -        | 
+    |  Reproduced | 43.29      | 52.50    | [log](https://drive.google.com/file/d/1wnr7c9P43UtQ9wCzOiqGCYmaxkoXf2AE/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1vq9WxuV229spEX7JQCMTluLXvvefLRzq/view?usp=sharing) |
+  
+    Note that we lost the original ckpt for this dataset. However, the reproduced result is slightly better than that reported in the paper.
 - MAFW
 
     ```
