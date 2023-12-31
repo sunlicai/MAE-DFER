@@ -809,6 +809,19 @@ class VideoMAE(torch.utils.data.Dataset):
                 raise(RuntimeError("Found 0 video clips in subfolders of: " + root + "\n"
                                    "Check your data directory (opt.data-dir)."))
 
+        # me: new added for VoxCeleb2
+        self.is_voxceleb2 = False
+        self.crop_idxs = None
+        if 'voxceleb2' in setting.lower():
+            self.is_voxceleb2 = True
+            image_size = int(model.split('_')[-1])
+            if image_size == 192:
+                self.crop_idxs = ((0, 192), (16, 208))
+                print(f"==> Note: use crop_idxs={self.crop_idxs} for VoxCeleb2!!!")
+            elif image_size <= 160: # me: old is == 160
+                self.crop_idxs = ((0, 160), (32, 192))
+                print(f"==> Note: use crop_idxs={self.crop_idxs} for VoxCeleb2!!!")
+
 
     def __getitem__(self, index):
 
