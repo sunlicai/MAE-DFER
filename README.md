@@ -9,7 +9,8 @@
 > University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
 ## 📰 News
-**[2023.12.13]** We provide the fine-tuned model on FERV39k. Please check them below.<br>
+**[2023.12.31]** We upload the pre-training code.<br>
+**[2023.12.13]** We provide the fine-tuned model on FERV39k. Please check it below.<br>
 **[2023.12.11]** We provide the fine-tuned models across five folds on DFEW. Please check them below.<br>
 **[2023.10.31]** We upload the [poster](figs/MAE-DFER%20Poster.pdf) of MAE-DFER for ACM MM 2023.<br>
 
