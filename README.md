@@ -9,6 +9,7 @@
 > University of Chinese Academy of Sciences & Institute of Automation, Chinese Academy of Sciences & Tsinghua University<br>
 
 ## 📰 News
+**[2024.01.02]** We provide the fine-tuned models across five folds on MAFW. Please check them below.<br>
 **[2023.12.31]** We upload the pre-training code.<br>
 **[2023.12.13]** We provide the fine-tuned model on FERV39k. Please check it below.<br>
 **[2023.12.11]** We provide the fine-tuned models across five folds on DFEW. Please check them below.<br>
@@ -142,8 +143,8 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     The fine-tuned checkpoints and logs on FERV39k are provided as follows:
     |  Version    | UAR        | WR       |      Fine-tuned   Model            |
     | :------:    | :--------: | :------: | :-----------------------:          |
-    |  Reported   | 43.12      | 52.07    | [log](logs/ferv39k.out) / -        | 
     |  Reproduced | 43.29      | 52.50    | [log](https://drive.google.com/file/d/1wnr7c9P43UtQ9wCzOiqGCYmaxkoXf2AE/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1vq9WxuV229spEX7JQCMTluLXvvefLRzq/view?usp=sharing) |
+    |  Reported   | 43.12      | 52.07    | [log](logs/ferv39k.out) / -        | 
   
     Note that we lost the original ckpt for this dataset. However, the reproduced result is slightly better than that reported in the paper.
 - MAFW
@@ -152,8 +153,20 @@ Download the model pre-trained on VoxCeleb2 from [this link](https://drive.googl
     sh scripts/mafw/finetune_local_global_attn_depth16_region_size2510_with_diff_target_164.sh
     ```
     
-    Our running log file can be found in [this file](logs/mafw.out).
+    <!--Our running log file can be found in [this file](logs/mafw.out). -->
 
+    The fine-tuned checkpoints and logs across five folds on MAFW are provided as follows: 
+    |  Fold    | UAR        | WR       |      Fine-tuned   Model            |
+    | :------: | :--------: | :------: | :-----------------------:          |
+    |  1       | 36.11      | 46.71    | [log](https://drive.google.com/file/d/1fhdiIbAVpp4qea_ri6l6etp-AaSM9DyH/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1BXTp-2mdy0fvrcjwFsZ4fPY53E4DotvR/view?usp=sharing) | 
+    |  2       | 42.37      | 54.82    | [log](https://drive.google.com/file/d/1L7HK7MR-WLIA1I2mU77LuGhA8OZA2Agv/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1Lzm50nPzZtTODfNYSkSLm09mhExHu2eL/view?usp=sharing) | 
+    |  3       | 46.25      | 58.87    | [log](https://drive.google.com/file/d/1R3UsOK0qlmFKaNRdlX55GjrYRwKlISO1/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1WlCTw5OjV6SZ7L7rU5xzvbVD_GTcp8CC/view?usp=sharing) | 
+    |  4       | 45.42      | 59.50    | [log](https://drive.google.com/file/d/1LlBs2fQyv6nZBQnrVIvCXmyHqKPm2ARm/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/18fdMGu-GdYxUmCEG-33NR3hxvHFyrO-v/view?usp=sharing) | 
+    |  5       | 41.66      | 55.27    | [log](https://drive.google.com/file/d/1rQb1WX9e4xuqgofFhLbcl-kRJO3Hgh4l/view?usp=sharing) / [checkpoint](https://drive.google.com/file/d/1CO6OY-P6oM5LMikLTlB5iz_AXack2vfH/view?usp=sharing) |
+    |  Total (Reproduced)   | 42.36      | 55.03    | - |
+    |  Total (Reported)     | 41.62      | 54.31    | - |
+
+    Note that we lost the original ckpts for this dataset. However, the reproduced result is slightly better than that reported in the paper.
 
 ## ☎️ Contact 
 
