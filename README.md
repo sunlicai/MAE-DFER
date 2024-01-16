@@ -108,9 +108,17 @@ An example of [train.csv](saved/data/dfew/org/split01/train.csv) of DFEW fold1 (
 /mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02578 6
 ```
 
-## 📍Pre-trained Model
+Note that, `label` for the pre-training dataset (i.e., VoxCeleb2) is dummy label, you can simply use `0`.
 
-Download the model pre-trained on VoxCeleb2 from [this link](https://drive.google.com/file/d/1nzvMITUHic9fKwjQ7XLcnaXYViWTawRv/view?usp=sharing) and put it into [this folder](saved/model/pretraining/voxceleb2/videomae_pretrain_base_dim512_local_global_attn_depth16_region_size2510_patch16_160_frame_16x4_tube_mask_ratio_0.9_e100_with_diff_target_server170).
+## 🔄 Pre-training MAE-DFER
+
+- VoxCeleb2
+
+    ```
+    sh scripts/voxceleb2/pretrain_local_global_attn_depth16_region_size2510_with_diff_target_102.sh
+    ```
+    
+    You can download our pre-trained model on VoxCeleb2 from [here](https://drive.google.com/file/d/1nzvMITUHic9fKwjQ7XLcnaXYViWTawRv/view?usp=sharing) and put it into [this folder](saved/model/pretraining/voxceleb2/videomae_pretrain_base_dim512_local_global_attn_depth16_region_size2510_patch16_160_frame_16x4_tube_mask_ratio_0.9_e100_with_diff_target_server170).
 
 ## ⤴️ Fine-tuning with pre-trained models
 
