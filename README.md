@@ -108,7 +108,7 @@ An example of [train.csv](saved/data/dfew/org/split01/train.csv) of DFEW fold1 (
 /mnt/data1/brain/AC/Dataset/DFEW/Clip/jpg_256/02578 6
 ```
 
-Note that, `label` for the pre-training dataset (i.e., VoxCeleb2) is dummy label, you can simply use `0`.
+Note that, `label` for the pre-training dataset (i.e., VoxCeleb2) is dummy label, you can simply use `0` (see [voxceleb2.py](preprocess/voxceleb2.py)).
 
 ## 🔄 Pre-training MAE-DFER
 
