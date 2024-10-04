@@ -292,20 +292,23 @@ class LGBlock(nn.Module):
             ## perform global (inter-region) self-attention
             if not self.no_second:
                 # messenger_tokens: representative tokens
-                messenger_tokens = rearrange(x[:,0], '(b n) c -> b n c', b=b) # attn on 'n' dim
+                # .clone(): fix in-place error in higher pytorch version, please refer to https://github.com/sunlicai/MAE-DFER/issues/3#issuecomment-1809834219
+                messenger_tokens = rearrange(x[:,0].clone(), '(b n) c -> b n c', b=b) # attn on 'n' dim
                 messenger_tokens = messenger_tokens + self.drop_path(
                     self.second_attn(self.second_attn_norm0(messenger_tokens))
                 )
                 x[:,0] = rearrange(messenger_tokens, 'b n c -> (b n) c')
             else: # for usage in the third attn
-                messenger_tokens = rearrange(x[:,0], '(b n) c -> b n c', b=b) # attn on 'n' dim
+                # .clone(): fix in-place error in higher pytorch version, please refer to https://github.com/sunlicai/MAE-DFER/issues/3#issuecomment-1809834219
+                messenger_tokens = rearrange(x[:,0].clone(), '(b n) c -> b n c', b=b) # attn on 'n' dim
 
             ## perform local-global interaction
             if not self.no_third:
                 if self.third_attn_type == 'self':
                     x = x + self.drop_path(self.third_attn(self.third_attn_norm0(x)))
                 else:
-                    local_tokens = rearrange(x[:,1:], '(b n) s c -> b (n s) c', b=b)# NOTE: n merges into s (not b), (B, N*(S-1), D)
+                    # .clone(): fix in-place error in higher pytorch version, please refer to https://github.com/sunlicai/MAE-DFER/issues/3#issuecomment-1809834219
+                    local_tokens = rearrange(x[:,1:].clone(), '(b n) s c -> b (n s) c', b=b)# NOTE: n merges into s (not b), (B, N*(S-1), D)
                     local_tokens = local_tokens + self.drop_path(
                         self.third_attn(
                             self.third_attn_norm0(local_tokens), # (b, n*(s-1), c)
