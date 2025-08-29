@@ -178,7 +178,7 @@ Note that, `label` for the pre-training dataset (i.e., VoxCeleb2) is dummy label
 
 ## ☎️ Contact 
 
-If you have any questions, please feel free to reach me out at `sunlicai2019@ia.ac.cn`.
+If you have any questions, please feel free to reach me out at `licai.sun@oulu.fi`.
 
 ## 👍 Acknowledgements
 
